@@ -1,5 +1,8 @@
 @import "bootstrap";
-
+body{
+  background: image_url('floor-tile.png');
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
 .booyah-box{
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit: 1px 1px 2px 0 #d0d0d0;
@@ -14,4 +17,8 @@
 h1, h2, h3, h4, h5, h6{
   margin: 0;
   padding: 0;
+}
+.navbar{
+  background: image_url('memphis-mini-dark.png');
+  box-shadow: 3px 4px 4px #888888;
 }
