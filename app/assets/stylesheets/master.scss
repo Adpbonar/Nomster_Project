@@ -13,6 +13,9 @@ body{
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 90%;
 }
 h1, h2, h3, h4, h5, h6{
   margin: 0;
@@ -27,3 +30,17 @@ h1, h2, h3, h4, h5, h6{
   color: #74808B;
   font-size: 26px;
 }
+
+.pagination {
+  cursor: default;
+  height: 22px;
+
+
+  }
+  a, span, em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: center;
+    margin-right: 1px;
+    font-weight: bolder;
+    }
