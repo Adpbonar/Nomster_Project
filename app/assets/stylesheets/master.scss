@@ -34,8 +34,7 @@ h1, h2, h3, h4, h5, h6{
 
 .pagination {
   cursor: default;
-  height: 22px;
-
+  height: 5px;
 
   }
   a, span, em {
@@ -54,7 +53,8 @@ h1, h2, h3, h4, h5, h6{
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   opacity: .8;
 }
 ::selection {
