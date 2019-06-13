@@ -70,3 +70,19 @@ h1, h2, h3, h4, h5, h6{
   margin: 3px;
   font-weight: bold;
 }
+.white {
+  color: white;
+}
+.white:hover, white:focus {
+  color: #e8e8e8;
+  text-decoration: none;
+} 
+html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height:300px;
+    }
+  
