@@ -13,8 +13,18 @@
       <% end %>
     </div>
 
-       <% end %>
-
+    <% end %>
+<% if place.comments.present? %>
+<div class="col-12">
+  <blockquote>
+    <% if comments.last.humanized_rating.present? %>
+      <b><%= comment.humanized_rating %></b> -
+    <% end %>
+    <%= comment.message %>
+    <small><%= comment.user.email %></small>
+  </blockquote>
+</div>
+<% end %>
    <br class="clear" />
    <br />
   <div class="pbackground">    
