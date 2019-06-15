@@ -8,7 +8,7 @@
     <br />
     <p><%= place.description %></p><br />
 
-    <% if place.comments.present? %>
+  <% if place.comments.present? %>
       <div class="col-12">
         <blockquote>
           <% if place.comments.last.humanized_rating.present? %>
@@ -19,8 +19,8 @@
         </blockquote>
       </div>
   </div>
-    <% end %>
   <% end %>
+<% end %>
    <br class="clear" />
    <br />
 </div>
@@ -31,5 +31,3 @@
     <% end %>
     <br />
   </div>
-
-<br>
