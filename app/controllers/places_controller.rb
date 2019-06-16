@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :eidt, :update, :destroy]
   def index
-    @places = Place.all.order("name").page(params[:page]).per_page(3)
+    @places = Place.all.order("name").page(params[:page]).per_page(4)
   end
 
   def new
@@ -24,6 +24,7 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
+    @photo = Photo.new
     if @place.user != current_user
       return render plain: "Not Allowed", status: :forbidden
     end
