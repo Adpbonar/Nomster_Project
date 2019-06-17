@@ -8,15 +8,5 @@
     <%= f.submit 'Update', class: 'btn btn-primary' %>
   <% end %>
   <br />
-  <hr />
-  <br />
-  <h2>Add a photo</h2>
-  <br />
-  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-    <%= f.input :picture %>
-    <br />
-    <%= f.input :caption %>
-    <br />
-    <%= f.submit 'Add', class: 'btn btn-primary' %>
-  <% end %>
+  <hr />  
 </div>
