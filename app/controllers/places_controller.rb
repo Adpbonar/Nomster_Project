@@ -2,7 +2,7 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :eidt, :update, :destroy]
   def index
     @places = Place.all.order("name").page(params[:page]).per_page(4)
-    @photo = Photo.find(19)
+    @photo = Photo.find(1)
   end
 
   def new
