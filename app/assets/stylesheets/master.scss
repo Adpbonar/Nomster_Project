@@ -50,7 +50,6 @@ h1, h2, h3, h4, h5, h6{
 .pbackground {
   background-color: #D0D3D4;
   border-top: 2px solid grey;
-  position: fixed;
   bottom: 0;
   width: 100%;
   padding-top: 3px;
@@ -125,4 +124,25 @@ blockquote p {
   max-width: 90%;
   margin-top: 20px;
   margin-bottom: 15px;
+}
+.carousel-caption {
+  color: black;
+  font-weight: bolder;
+  background-color:white;
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+  opacity: .7;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width:30%;
+  margin-bottom: 28px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+.full-width {
+  width: 100%;
+}
+nav {
+  z-index: 1;
 }
