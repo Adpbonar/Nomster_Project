@@ -26,10 +26,13 @@ h1, h2, h3, h4, h5, h6{
   background: image_url('memphis-mini-dark.png');
   box-shadow: 3px 4px 4px #888888;
 }
+
+.navbar-brand {  
+font-family: 'kaushan_scriptregular';
+ color: #74808B;
+font-size: 26px;
+  }
 .navbar-inverse{
-  font-family: 'kaushan_scriptregular';
-  color: #74808B;
-  font-size: 26px;
   margin-bottom: 0;
 }
 
@@ -114,7 +117,6 @@ blockquote p {
 
 .caption img {
   max-width: 90%;
-  box-shadow: 1px 2px #888888;
   border-radius: 5%;
   border: 1px solid #D0D3D4;
   }
@@ -143,11 +145,8 @@ blockquote p {
   font-size: 60px;
   font-weight: 100;
   text-shadow: black 1px 1px;
-   position: absolute;
-   left: 0;
-}
-nav {
-  z-index: 1;
+  position: absolute;
+  left: 0;
 }
 .carousel-inner,
  .carousel-item > img, .carousel-inner > .carousel-item > a > img {
