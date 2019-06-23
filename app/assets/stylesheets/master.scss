@@ -10,13 +10,30 @@ body{
   box-shaddow: 1px 1px 2px 0 #d0d0d0;
   background: #fff;
   border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #e4e4e4;
+  border-bottom:  none;
   margin-top: 20px;
   margin-bottom: 15px;
   padding: 20px;
   margin-right: auto;
+  margin-left: auto; 
+}
+.place-box{
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit: 1px 1px 2px 0 #d0d0d0;
+  box-shaddow: 1px 1px 2px 0 #d0d0d0;
+  background: rgb(119,136,153);
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #e4e4e4;
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding: 20px;
+  margin-right: auto;
   margin-left: auto;
- 
+  width: 95%;
+  border-radius: 10px;
+  }
+.place-box h1 {
+  color: #ffffff;
 }
 h1, h2, h3, h4, h5, h6{
   margin: 0;
@@ -124,10 +141,17 @@ blockquote p {
   text-align: center;
 }
 .front img {
-  max-width: 90%;
+  max-height: 300px;
+  display: inline;
   margin-top: 20px;
   margin-bottom: 15px;
-}
+  padding: 5px;
+  box-shadow: 1px 2px #888888;
+  }
+  .front {
+  max-height: 325px;
+  overflow: hidden;
+  }
 .carousel-caption {
   color: grey;
   font-weight: bolder;

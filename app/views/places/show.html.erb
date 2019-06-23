@@ -1,25 +1,28 @@
- <div class="booyah-box col-10 offset-1">
+<div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p>
   <br />
-  <center><H2><%= "Photos of #{@place.name}" %></H2></center><br />
-  <% @place.photos.each do |photo| %>
-   
-  <div class="row col-10 offset-1">
-    <div class="caption">
-      <%= image_tag photo.picture.url %>
-     <br /><b><%= photo.caption %></b>
+  <% if @place.photos.present? %>
+    <center><H2><%= "Photos of #{@place.name}" %></H2></center><br />
+    <% @place.photos.each do |photo| %>
+    <div class="row col-10 offset-1">
+      <div class="caption">
+        <%= image_tag photo.picture.url %>
+       <br /><b><%= photo.caption %></b>
+      </div>
+      <br /><br />
     </div>
-    <br /><br />
-  </div>
+    <% end %>
 <% end %>
 <br />
 
   <br class="clear"/>
   <br />
  <% if @place.latitude.present? && @place.longitude.present? %>
+ <h2 class="text-center"><%= "Find #{@place.name}" %></h2>
+ <br />
     <script>
 
       function initMap() {

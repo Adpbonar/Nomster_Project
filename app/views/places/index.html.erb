@@ -38,20 +38,20 @@
 
 
 <% @places.each do |place| %>
-
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
     <br />
     <i><%= place.address %></i><br />
     <br />
     <p><%= place.description %></p><br />
-    <div class="caption">
-      <% place.photos do |photo| %>
-        <%  1.times do photo.shift %>
-          <%= image_tag photo.picture.url %> 
-        <% end %>
-      <% end %>      
-    </div>
+    <% if place.photos.present? %>
+      <center><div class="front">
+        <% place.photos.each do |photo| %>
+          <% photo = image_tag photo.picture.url %>
+            <%= photo %> 
+          <% end %>   
+        <% end %> 
+    </div></center>
     <div class="col-12">
       <br />
       <% if place.comments.present? %>
@@ -65,19 +65,19 @@
         </blockquote>
       </div>
       <% end %>
-    </div>
+    </div></div>
   </div>
 </div>
 <% end %>
-   <br class="clear" />
-   <br />
-  </div>
-  <div class="pbackground">    
-    <div class="col-10 offset-1">
-         <%= will_paginate @places %>
-        <% for place in @places  %>  
-    <% end %>
-    <br />
-  </div>
+ <br class="clear" />
+ <br />
+</div>
+<div class="pbackground">    
+  <div class="col-10 offset-1">
+       <%= will_paginate @places %>
+      <% for place in @places  %>  
+  <% end %>
+  <br />
+</div>
 
   
