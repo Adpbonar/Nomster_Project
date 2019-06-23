@@ -45,13 +45,16 @@
     <br />
     <p><%= place.description %></p><br />
     <% if place.photos.present? %>
-      <center><div class="front">
-        <% place.photos.each do |photo| %>
-          <% photo = image_tag photo.picture.url %>
-            <%= photo %> 
+      <center>
+        <div class="front">
+          <% place.photos.each do |photo| %>
+            <% photo = image_tag photo.picture.url %>
+              <%= photo %> 
           <% end %>   
-        <% end %> 
-    </div></center>
+        </div>
+      </center>
+    <% end %>
+    <div class="clear"></div>
     <div class="col-12">
       <br />
       <% if place.comments.present? %>
@@ -65,13 +68,14 @@
         </blockquote>
       </div>
       <% end %>
-    </div></div>
+    </div>
   </div>
-</div>
+
 <% end %>
+
  <br class="clear" />
  <br />
-</div>
+
 <div class="pbackground">    
   <div class="col-10 offset-1">
        <%= will_paginate @places %>
