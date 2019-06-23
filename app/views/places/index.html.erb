@@ -39,14 +39,22 @@
 
 <% @places.each do |place| %>
 
-  <div class="booyah-box">
+  <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
     <br />
     <i><%= place.address %></i><br />
     <br />
     <p><%= place.description %></p><br />
-
-  <% if place.comments.present? %>
+    <div class="caption">
+      <% place.photos do |photo| %>
+        <%  1.times do photo.shift %>
+          <%= image_tag photo.picture.url %> 
+        <% end %>
+      <% end %>      
+    </div>
+    <div class="col-12">
+      <br />
+      <% if place.comments.present? %>
       <div class="col-12">
         <blockquote>
           <% if place.comments.last.humanized_rating.present? %>
@@ -56,15 +64,16 @@
           <small><%= place.comments.last.user.email %></small>
         </blockquote>
       </div>
-
-  <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <% end %>
    <br class="clear" />
    <br />
   </div>
   <div class="pbackground">    
-    <div class="col-12">
+    <div class="col-10 offset-1">
          <%= will_paginate @places %>
         <% for place in @places  %>  
     <% end %>
