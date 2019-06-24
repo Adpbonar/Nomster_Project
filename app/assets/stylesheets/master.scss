@@ -146,15 +146,13 @@ blockquote p {
   margin-bottom: 15px;
   padding: 5px;
   padding-left: 8px;
-  passing-right: 8px;
-  border-top: 2px solid #800020;
-  border-bottom: 2px solid #800020; 
-  border-right: 2px dotted #800020;
-  border-left: 2px dotted #800020;  
+  padding-right: 8px;
   }
   .front {
   max-height: 325px;
   overflow: hidden;
+  padding: 4px;
+  margin-bottom: 2px;
   }
 .carousel-caption {
   color: grey;
