@@ -1,9 +1,11 @@
 <div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
+  <small>Posted by:
+  <%= @place.user.email %></small><br /><br />
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p>
-  <br />
+   <br />
   <% if @place.photos.present? %>
     <center><H2><%= "Photos of #{@place.name}" %></H2><br />
     <% @place.photos.each do |photo| %>
@@ -11,10 +13,11 @@
         <%= image_tag photo.picture.url %>
         <br /><b><%= photo.caption %></b>
         <br /><br />
+      <div class="clear"></div>
       </div>
     <% end %>
   <% end %>
-  <div class="float-right">
+  <div class="float-right" style="z-index: 1;">
       <% if current_user && current_user == @place.user %>
         <%= link_to 'Add a photo', '#', data: {toggle: 'modal', target: '#photos-up'}, class: 'btn btn-success' %>
         <%= link_to 'edit', edit_place_path(@place), class: 'btn btn-primary' %>
@@ -78,7 +81,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <%= f.submit 'Add', class: 'btn btn-primary' %>
+       <%= f.submit 'Add Photo', class: 'btn btn-primary' %>
     </div>
           <% end %>
         </div>
@@ -116,8 +119,9 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
+      
     </div>
   </div>
 </div>

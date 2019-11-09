@@ -6,6 +6,12 @@ class CommentsController < ApplicationController
     redirect_to place_path(@place)
   end
 
+  def destroy
+    @place = Place.find(params[:place_id])
+    @place.comments.destroy(comment_params.merge(user: current_user))
+     redirect_to  user_path(current_user)
+  end
+
   private
 
   def comment_params

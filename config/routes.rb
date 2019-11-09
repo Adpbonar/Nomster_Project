@@ -9,4 +9,7 @@ Rails.application.routes.draw do
     resources :photos, only: :create
   end
   resources :users, only: :show
+  resources :users do
+    resources :comments, only: :destroy
+  end
 end
