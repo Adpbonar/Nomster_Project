@@ -9,3 +9,5 @@ Built using Ruby 2.5.3 and Rails 5.2.3, this Yelp clone is styled with CSS and B
 <br />
 <br />
 <img src="https://docs.google.com/uc?id=12yo6aFfOK7hjjj9sbQf_KVpNleuROX4_" />
+<br />
+Kick the tires: https://nomster-devan-potterbonar.herokuapp.com.
