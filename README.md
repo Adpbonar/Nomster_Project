@@ -1,4 +1,4 @@
-# README
+# Nomster
 
 Built using Ruby 2.5.3 and Rails 5.2.3, this Yelp clone is styled with CSS and Bootstrap and allows users to add places to a database. It enables users to leave comments and rate their experiences at those places. Using devise for authentication, this app emails users when new comments are added to their place. It integrates with AWS S3 for image uploading and uses the Google Maps API and geocoding services to show the locations on a map. 
 
